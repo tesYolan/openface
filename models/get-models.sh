@@ -51,6 +51,16 @@ if [ ! -f openface/nn4.small2.v1.t7 ]; then
                     die "+ celeb-classifier.nn4.small2.v1.pkl: Error in wget." )
 fi
 
+if [ ! -f openface/celeb-classifier.nn4.small2.v1.pkl ]; then
+  printf "\n\n====================================================\n"
+  printf "Downloading celeb-classifer.nn4.small2.v1.pkl"
+  printf "====================================================\n\n"
+
+  wget -nv http://openface-models.storage.cmusatyalab.org/celeb-classifier.nn4.small2.v1.pkl \
+    -O openface/celeb-classifier.nn4.small2.v1.pkl
+  [ $? -eq 0 ] || ( rm openface/celeb-classifier.nn4.small2.v1.pkl && \
+                    die "+ celeb-classifier.nn4.small2.v1.pkl: Error in wget." )
+fi
 printf "\n\n====================================================\n"
 printf "Verifying checksums.\n"
 printf "====================================================\n\n"
