@@ -53,7 +53,7 @@ fi
 
 if [ ! -f openface/celeb-classifier.nn4.small2.v1.pkl ]; then
   printf "\n\n====================================================\n"
-  printf "Downloading celeb-classifer.nn4.small2.v1.pkl"
+  printf "Downloading celeb-classifer.nn4.small2.v1.pkl \n"
   printf "====================================================\n\n"
 
   wget -nv http://openface-models.storage.cmusatyalab.org/celeb-classifier.nn4.small2.v1.pkl \
